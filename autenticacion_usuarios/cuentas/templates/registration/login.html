@@ -3,8 +3,11 @@
 <div class="columns">
 {% block content %}
   <div class="column is-half">
-    <h1 class="is-size-3 mt-3">Log-in</h1>
-    {% if form.errors %}
+    <h1 class="is-size-3 mt-3">Ingreso</h1>
+    
+    <br>
+
+    <!-- {% if form.errors %}
 
       <p class="is-size-5">
         Tu usuario o contraseña son incorrectas.
@@ -15,7 +18,7 @@
         Por favor rellená el formulario. 
           Si no tienes cuenta registrate <a href="{% url "register" %}">register here</a>.
       </p>
-    {% endif %}
+    {% endif %} -->
     
     <div class="login-form">
       <form action="{% url 'login' %}" method="post">
@@ -28,7 +31,9 @@
         <input type="submit" value="Log-in" class="button mt-2">
         <input type="hidden" name="next" value="{{ next }}" />
       </form>
+      <br>
+     Si no tienes cuenta registrate <a href="{% url "register" %}"><strong>aquí</strong></a>.
     </div>
 </div>
-  {% endblock %}
+{% endblock %}
 </div>
