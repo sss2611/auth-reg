@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import LoginForm, UserRegistrationForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -48,3 +48,6 @@ def register(request):
     return render(request, 
                       'cuentas/register.html',
                       {'user_form': user_form})
+
+def logout(request):
+    return redirect('cuentas/login')

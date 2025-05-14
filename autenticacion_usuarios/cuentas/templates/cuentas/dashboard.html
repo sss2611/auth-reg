@@ -1,5 +1,42 @@
 {% extends "base.html" %}
 {% block title %}Inicio{% endblock %}
 {% block content %}
-  <h1>Bienvenido</h1>
+  
+  {% if request.user.is_authenticated %}
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="{% url 'dashboard' %}">
+         Bienvenido, <strong>{{ request.user.first_name|default:request.user.username }}</strong>
+        </a>
+  
+        <a class="navbar-item" href="#">
+          <strong>Fichas</strong>
+        </a>
+         <a class="navbar-item" href="#">
+          <strong>Noticias</strong>
+        </a>
+         <a class="navbar-item" href="#">
+          <strong>Colecciones</strong>
+        </a>
+         <a class="navbar-item" href="#">
+          <strong>Admitir Usuarios</strong>
+        </a>
+        <a class="navbar-item" href="password_change/">
+          Cambiar contraseña
+        </a>
+      </div>
+      {% if request.user.is_authenticated %}
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <p> 
+              <a class="" href="{% url 'login' %}">
+                <strong>Salir</strong>
+              </a>
+            </p>
+          </div>
+        </div>
+    
+      {% endif %}
+    </div>
+    {% endif %}
 {% endblock %}

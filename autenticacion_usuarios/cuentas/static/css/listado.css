@@ -1,0 +1,82 @@
+/* Archivo: listado.css */
+.menu {
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(189,189,189,1) 41%, rgba(189,189,189,1) 62%, rgba(189,189,189,0) 100%);
+}
+
+h1 {
+    color: #2c1072;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background: rgb(101, 101, 193);
+    /* background: #0c0a6d; */
+    color: black;
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Botón de confirmar */
+.btn-confirmar {
+    background: linear-gradient(33deg, #1b9a0a, #6ef4b5);
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Botón de eliminar */
+.btn-eliminar {
+    background: linear-gradient(33deg, #700409, #ec7d86);
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Efecto hover */
+.btn:hover {
+    opacity: 0.8;
+}
